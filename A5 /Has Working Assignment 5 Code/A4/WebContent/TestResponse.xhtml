@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:ui="http://java.sun.com/jsf/facelets"
+      xmlns:f="http://java.sun.com/jsf/core"
+      xmlns:h="http://java.sun.com/jsf/html"> 
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<title>JSF Response Page</title>
+</head>
+<body>
+<p>Hello, <big><b>#{user.firstName} #{user.lastName}!</b></big></p>
+
+<h:form>
+<h:dataTable value="#{formController.service.orders}" var="o" border="3">
+	<h:column>
+	<f:facet name="header">The Order Number: </f:facet>
+		#{o.orderNo}
+	</h:column>
+	 
+	<h:column>
+		<f:facet name="header">The Product Name: </f:facet>
+		#{o.productName}
+	</h:column>
+	 
+	<h:column>
+		<f:facet name="header">The Price is: </f:facet>
+		#{o.price}
+	</h:column> 
+	
+	<h:column>
+		<f:facet name="header">The Quantity is: </f:facet>
+		#{o.quantity}
+	</h:column> 
+	
+	<h:column>
+		<f:facet name="header">The Order ID is:</f:facet>
+		#{o.ID}
+	</h:column> 
+	
+	
+	 
+</h:dataTable>
+</h:form>
+
+
+<h:commandButton id="returntologin" value="Back To Login" onclick="location.href = 'TestForm.xhtml';"></h:commandButton>
+</body>
+</html>

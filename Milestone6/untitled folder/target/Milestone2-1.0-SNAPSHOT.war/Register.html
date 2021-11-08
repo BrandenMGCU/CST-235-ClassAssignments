@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="ISO-8859-1">
+    <title>Insert title here</title>
+    <style>
+        body {
+            background-image:
+                    url('https://image.shutterstock.com/image-photo/lime-retro-pastel-paper-background-260nw-598436903.jpg');
+            background-repeat: no-repeat;
+            background-size: cover;
+        }
+    </style>
+</head>
+<body>
+<form action="/RegisterServlet.java" method="post">
+    <h1 align="center" style="margin-top: 5%">Registration Form</h1>
+    <table align="center" style="margin-top: 10%">
+        <tr>
+            <td>Name</td>
+            <td><input type="text" name="name"></td>
+        </tr>
+        <tr>
+            <td>Email</td>
+            <td><input type="email" name="email"></td>
+        </tr>
+        <tr>
+            <td>UserName</td>
+            <td><input type="text" name="username"></td>
+        </tr>
+
+        <tr>
+            <td>Address</td>
+            <td><input type="text" name="address"></td>
+        </tr>
+
+        <tr>
+            <td>Phone Number</td>
+            <td><input type="text" name="phonenumber"></td>
+        </tr>
+
+        <tr>
+            <td>Password</td>
+            <td><input type="password" name="password"></td>
+        </tr>
+
+        <tr>
+            <td></td>
+            <td><input type="submit" value="Submit"  formaction="RegisterServlet.java" id="button-1" /></td>
+        </tr>
+
+    </table>
+</form>
+</body>
+</html>

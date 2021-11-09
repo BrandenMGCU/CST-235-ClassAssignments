@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+xmlns:ui="http://java.sun.com/jsf/facelets"
+xmlns:f="http://java.sun.com/jsf/core"
+xmlns:h="http://java.sun.com/jsf/html">
+
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<title>JSF Form Page</title>
+</head>
+<body>
+<ui:composition>
+<h1>Welcome to the Login Form Page!</h1>
+<h:form>
+<h:inputText id="firstName"  value="#{user.firstName}"/>
+<h:inputText id="lastName"  value="#{user.lastName}"/>
+<h:commandButton id="submit" value="Submit" action="#{formController.onSubmit(user)}"/>
+<h:commandButton id="onflash" value="Flash" action="#{formController.onFlash(User)}"/>
+</h:form>
+<h:messages/>
+</ui:composition>
+</body>
+</html>
